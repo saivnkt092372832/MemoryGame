@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+.main {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+.header{
+  font-family: cursive;
+  margin-top:30px;
+  font-size: 130%;
+
+}
+.para{
+  font-family: cursive;
+  color: green;
+}
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.image {
+  width:30%;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.differences-found {
+  font-size: 130%;
+  margin-bottom: 20px;
+  background-color: rgb(48, 156, 84);
+  border-radius: 1rem;
+  width:32%;
+  height: 20%;
+  margin:auto;
+  font-family: cursive;
+ 
+
+}
+
+/* h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+} */
+.butt{
+  color:rgb(243, 243, 243);
+  background-color: green;
+}
+.p1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+p{
+  font-size: 1.7rem;
+}
+/* .score{
+  color:rgb(155, 42, 165);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 100%;
+  font-weight: 100;
+  background-color: rgb(245, 220, 240);
+  /* background-color: #4caf50; */
+  /* border-radius: 2rem;
+  padding: 0.6rem;
+  position:absolute;
+  top:2%;
+  right:1%;
+  width:15%;
+} */
+/* .valuescore{
+  background-color: rgb(165, 217, 222);
+  margin-left: 0.4rem;
+  color:darkblue;
+  border-radius: 2rem;
+  padding:0.2rem;
+  
+} */ 
+.score {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.valuescore {
+  font-size: 36px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #0077be;
+}
+

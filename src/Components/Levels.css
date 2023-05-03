@@ -1,0 +1,93 @@
+/* .bo{
+    background-image: url("https://media.istockphoto.com/id/1154634349/photo/treasure-map.jpg?s=612x612&w=0&k=20&c=i8AZ-TuB-hETLQ9qS8JRKGL_d8Ws6fjZpMd0S2x5-x0=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+}
+.child{
+    width:20%;
+    border: 2px solid black;
+    color:red;
+    padding-top: 7.7vh;
+    cursor: pointer;
+    background-color: aqua;
+    text-align: center;
+    height:20vh;
+} */
+.bo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .child{
+    width: 150px;
+    height: 150px;
+    /* background-color: #c7d6de; */
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+  }
+  .child1{
+    background-image: url('https://ideas.hallmark.com/wp-content/uploads/2023/01/ii_ScavengerHunt_2.jpg');
+    background-size: contain;
+    color:rgb(255, 255, 255);
+    font-family: cursive;
+    font-weight: 2rem;
+    font-size: 2rem;
+  }
+  .child2{
+    background-image: url('https://media.istockphoto.com/id/1210340036/photo/serious-young-male-detective-holding-magnifying-glass-by-right-eye.jpg?s=612x612&w=0&k=20&c=sjMPW2_3HzsVLZGsKGy7XtxH86-5-i-OPfe8ujE_Dqk=');
+    background-size: contain;
+    color:rgb(255, 254, 255);
+    font-family: cursive;
+    font-weight: 2rem;
+    font-size: 2rem;
+  }
+  .child3{
+    background-image: url('https://image.cnbcfm.com/api/v1/image/107187616-1675288127676-Feature_Image_16x9.jpg?v=1675352511');
+    background-size: contain;
+    color:rgb(255, 255, 255);
+    font-family: cursive;
+    font-weight: 2rem;
+    font-size: 2rem;
+  }
+  
+  
+  .child:hover {
+    transform: scale(1.1);
+  }
+  @media (max-width: 475px)  {
+    .bo{
+        flex-direction:column;
+        gap: 10px;
+    }
+    
+ }
+ /* .logout-btn {
+  background-color: #2196f3;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border-radius: 4px;
+  position: relative;
+  left: 70%;
+}
+
+.logout-btn:hover {
+  background-color: #0b7dda;
+} */

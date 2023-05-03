@@ -1,0 +1,32 @@
+/* .clueimage{
+    width:10%;
+    cursor: pointer;
+}
+.allimages{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 3%;
+    flex-wrap: wrap;
+    margin-top:25%;
+} */
+.allimages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .clueimage {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .clueimage:hover {
+    transform: scale(1.1);
+  }
