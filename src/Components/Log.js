@@ -2,29 +2,24 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import './Clue.css'
+import { useNavigate } from 'react-router-dom';
 function Log(props) {
+  const navigate=useNavigate();
   const [show, setShow] = useState(true);
   const handleClose = () => 
   {
     setShow(false);
   }
+  const gotologin=(e)=>{
+    e.preventDefault();
+    navigate('../login')
+  }
+  
+    
   return (
-    // <div className='lolu'>
-    //   <Modal show={show} onHide={handleClose} >
-    //     <Modal.Header closeButton>
-    //       <Modal.Title style={{fontFamily:'cursive'}}>"STATUS"</Modal.Title>
-    //     </Modal.Header>
-    // <Modal.Body>
-    //     "PLEASE LOGIN TO PLAY THE GAME"
-    //    </Modal.Body>
-    //     <Modal.Footer>
-    //       <Button variant="secondary" onClick={handleClose}>
-    //         Close
-    //       </Button>
-    //     </Modal.Footer>
-    //   </Modal>
-    // </div>
-    alert("please log in to play ")
+   <>
+   <Button className='d-block mx-auto' onClick={gotologin}> Please Log In To Play</Button>
+    </>
   );
 }
 

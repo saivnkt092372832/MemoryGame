@@ -6,6 +6,8 @@ import Authentication from './Authentication';
 import { onAuthStateChanged } from 'firebase/auth';
 import Clue from './Clue';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { scoreActions } from '../store/scores';
 const LoginForm = () => {
     const navigate=useNavigate();
   const [email, setEmail] = useState('');
@@ -13,6 +15,7 @@ const LoginForm = () => {
   const [password, setPassword] = useState('');
   const [authUser,setAuthUser]=useState(null);
   const [lol,setLol]=useState(false);
+  const dispatch=useDispatch();
     useEffect(()=>{
         const listen=onAuthStateChanged(auth,(user)=>{
             if(user){
@@ -24,6 +27,7 @@ const LoginForm = () => {
             }
         })
     },[])
+    
     
     
   const handleSubmit = (event) => {

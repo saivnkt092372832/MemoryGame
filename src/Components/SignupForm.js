@@ -4,6 +4,8 @@ import  auth  from '../firebase';
 import { createUserWithEmailAndPassword} from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import Clue from './Clue';
+import { useDispatch } from 'react-redux';
+import { scoreActions } from '../store/scores';
 let error=45;
 const SignupForm = () => {
     const navigate=useNavigate();
@@ -21,9 +23,13 @@ const SignupForm = () => {
   })
    setSubmit(true);
   };
+  const dispatch=useDispatch()
 useEffect(()=>{
     if(submit && error===56)
+    {
+      dispatch(scoreActions.setEmail(email));
     navigate('/');
+    }
     console.log(submit)
     console.log(error)
 },[submit,error])

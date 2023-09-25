@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import './Clue.css'
 import { useNavigate } from 'react-router-dom';
 function Final(props) {
-    const navigate=useNavigate();
+  const navigate=useNavigate();
   const [show, setShow] = useState(true);
   const handleClose = () => 
   {

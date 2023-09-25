@@ -1,7 +1,7 @@
 import React,{useEffect, useState}from "react";
 
 import './printData.css'
-const answersData=['butterfly','chair','house','lock','apple','computer','earth','guitar','scissor','clock','pencil','icecream','telephone','rainbow','kite','aeroplane','bulb','cake','hammer','flowerpot'];
+const answersData=['butterfly','chair','house','lock','apple','computer','globe','guitar','scissor','clock','pencil','icecream','telephone','rainbow','kite','aeroplane','bulb','cake','hammer','flowerpot'];
 const validArray=[];
 const all=[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
 const PrintData=(props)=>{

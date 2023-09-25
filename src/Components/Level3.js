@@ -6,6 +6,8 @@ import Modall from './Modal';
 import Final from './Final';
 import NavigatorBar from './NavigatorBar'
 import Treasure from './Treasure';
+import { scoreActions } from '../store/scores';
+import { useDispatch } from 'react-redux';
 const answersData=['butterfly','chair','house','lock','apple','computer','globe','guitar','scissor','clock','pencil','icecream','telephone','rainbow','kite','aeroplane','bulb','cake','hammer','flowerpot'];
 const Game={
     title:"Memory Game (instructions)",
@@ -26,6 +28,8 @@ const Level3=()=>{
    const [negScore,setNegScore]=useState(0);
    const [win,setwin]=useState(false);
    const [gameover,setGameover]=useState(false);
+   const dispatch=useDispatch();
+
 //    const [minusScore,setMinusScore]=useState(0);
 useEffect(()=>{
     console.log("okbro")
@@ -46,6 +50,8 @@ useEffect(()=>{
     },20000)
    },[loadImage]);
    useEffect(()=>{
+    dispatch(scoreActions.setlevel3(score-negScore));
+    dispatch(scoreActions.modifyscore());
     if(score-negScore >= 8)
     setwin(true);
     console.log(win)

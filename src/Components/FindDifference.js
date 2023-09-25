@@ -1,4 +1,5 @@
 import React, { useRef, useState ,useEffect} from "react";
+import { useDispatch,useSelector } from "react-redux";
 import imageUrlb from '../Images/image1.png';
 import imageUrla from "../Images/image2.png";
 import style from './FindDifference.module.css';
@@ -6,6 +7,7 @@ import { Modal } from "bootstrap";
 import Modall from "./Modal";
 import Clue from "./Clue";
 import NavigatorBar from './NavigatorBar'
+import { scoreActions } from "../store/scores";
 
 const Game={
   title:"Find The Differences (instructions)",
@@ -17,17 +19,17 @@ const Game={
 ],best:"ALL THE BEST",
 }
 const FindDifferences = () => {
-  const [again,setAgain]=useState({0:false,1:false,2:false,3:false,4:false});
+  const [again,setAgain]=useState({0:1,1:1,2:1,3:1,4:1});
   const [numDifferencesFound, setNumDifferencesFound] = useState(0);
   const [isGameOver, setIsGameOver] = useState(false);
   const [ImageWidth,setImageWidth]=useState(628);
   const [ImageHeight,setImageHeight]=useState(380);
-  const [time,setTime]=useState(20);
+  const [time,setTime]=useState(30);
   const [reach,setReach]=useState(true);
   const [win,setWin]=useState(false);
-
+  const dispatch = useDispatch();
   const imgRef=useRef();
-  
+
   const differences = [
     {
       id: 1,
@@ -73,9 +75,9 @@ const FindDifferences = () => {
 
     for (let i = 0; i < differencesList.length; i++) {
       const difference = differencesList[i];
-      if (x > difference.x - 15 && x < difference.x + 15 && y > difference.y - 15 && y < difference.y + 15 && !again.i) {
-        setAgain(prevState => ({...prevState, [i]: true}));
-        
+      if (x > difference.x - 15 && x < difference.x + 15 && y > difference.y - 15 && y < difference.y + 15 && again[`${i}`]===1) {
+        console.log([i]);
+        setAgain((prevState )=> ({...prevState, [i]: 0}));
         setNumDifferencesFound(numDifferencesFound + 1);
         if (numDifferencesFound === differencesList.length - 1) {
           setIsGameOver(true);
@@ -92,12 +94,19 @@ const FindDifferences = () => {
   //   console.log(y)
   // }
   useEffect(()=>{
+    if(isGameOver)
+    {dispatch(scoreActions.setlevel2(numDifferencesFound))
+    dispatch(scoreActions.modifyscore());
     if(numDifferencesFound === 5)
-    setWin(true);
+    setWin(true);}
+    
   },[isGameOver])
   const settpoo=()=>{
     setReach(false);
   }
+  useEffect(()=>{
+    
+  })
   return (
     <div className={style["App"]}>
       <Modall text="Dasd" onClickHandler={settpoo} instructions={Game}></Modall>
